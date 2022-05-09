@@ -1,0 +1,49 @@
+.form{
+    margin-left: 40% !important;
+}
+
+.TitleLogin{
+    text-align: center !important;
+}
+
+
+.TextField{
+    width: 50% !important;
+}
+
+body{
+    background-color: #EAEAEA !important;
+}
+
+
+
+.navbaritem{
+    color: #08D9D6 !important;
+
+}
+
+.navbaritemright{
+    display: inline-block !important;
+    align-items: right !important;
+}
+
+.ds{
+    width: 100% !important; 
+    text-align:center !important;
+}
+
+
+
+.forgotpas{
+    text-decoration: none;
+    margin-left: 30%;
+}
+
+.pl{
+    width: 49.1% !important;
+}
+
+.add{
+    item-align: center !important;
+}
+
