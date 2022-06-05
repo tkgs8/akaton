@@ -34,9 +34,7 @@
           <li class="nav-item h5 fw-light px-3">
             <a class="nav-link" href="#topics">עזרה</a>
           </li>
-          <li class="nav-item h5 fw-light px-3">
-            <a class="nav-link" href="/src/logain.html">להתחבר</a>
-          </li>
+          
           <li class="nav-item h5 fw-light px-3">
             <a class="nav-link" href="/src/logain.html">להתחברות מורה</a>
           </li>
@@ -46,6 +44,22 @@
           <li class="nav-item h5 fw-light px-3">
             <a href="/src/prob.html" type="button" class="btn btn-danger">לאתר נגיש</a>
           </li>
+          <li>{% if request.user.is_authenticated %}
+            <p>{{ request.user.username }} שלום</p>
+        {% endif %}</li>
+
+        <li>
+          {% if request.user.is_authenticated %}
+          <a href="{% url 'logout' %}">Log Out</a>
+          {%else%}
+          <li class="nav-item h5 fw-light px-3">
+            <a class="nav-link" href="login">להתחבר</a>
+          </li>
+          {% endif %}
+        </form>
+        
+        </li>
+
           
         </ul>
       </div>

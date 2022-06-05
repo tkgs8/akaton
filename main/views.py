@@ -6,6 +6,7 @@ from .forms import NewUserForm
 from django.contrib.auth import login
 from django.contrib import messages
 # Create your views here.
+from django.contrib.auth import logout as logout
 
 
 def mainPage(request):
@@ -13,5 +14,4 @@ def mainPage(request):
 
 def loginPage(request):
     return render(request, 'login.html')
-
 
