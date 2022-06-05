@@ -1,0 +1,60 @@
+
+
+
+{% block content %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>akaton project</title>
+  <link rel="stylesheet" href="./main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <style>
+    section{
+      padding: 60px 0;
+    }
+  </style>
+</head> 
+  {% if form.errors %}
+    <p>שם המשתמש או הסיסמה שגויים</p>
+  {% endif %}
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <td><label for="exampleInputEmail1" class="form-label TextForm">כתובת איימיל</label></td>
+        <td> <input type="email" class="form-control TextField" id="exampleInputEmail1 " aria-describedby="emailHelp" {{ form.username }}</td>
+      </tr>
+      <tr>
+        <td><label for="exampleInputPassword1" class="form-label TextForm">סיסמה</label></td>
+        <td><input type="password" class="form-control TextField" id="exampleInputPassword1" {{ form.password }} </td>
+      </tr>
+    </table>
+    <input type="submit" value=התחברות class="btn btn-primary signin" />
+    <input type="hidden" name="next" value="{{ next }}" />
+  </form>
+
+  {# Assumes you setup the password_reset view in your URLconf #}
+  <p><a class= "" href="{% url 'password_reset' %}">שכחת סיסמה</a></p>
+
+{% endblock %}
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>akaton project</title>
+  <link rel="stylesheet" href="./main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <style>
+    section{
+      padding: 60px 0;
+    }
+  </style>
+</head>   
+
+<body> 
+  
